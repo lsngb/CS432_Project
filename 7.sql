@@ -24,7 +24,6 @@ begin
 		dbms_output.put_line('New supply is required');
 		--Order supply for product
 		select sid into v_sid from supply where pid = :new.pid;
-		/*
 		M := v_qoh_threshold - v_qoh + 1;
 		min_qty := 10 + M + v_qoh;
 		insert into supply values(sup_seq.nextval, :new.pid, v_sid, sysdate, min_qty);
@@ -34,7 +33,6 @@ begin
 		where pid = :new.pid;
 		--Print new qoh
 		dbms_output.put_line('The new qoh is: ' || min_qty + v_qoh);
-	*/
 	end if;
 	select last_visit_date into v_last_visit from customers where cid = :new.cid;
 	--If purchase made on same date
