@@ -33,6 +33,7 @@ sname varchar2(15) not null unique,
 city varchar2(15),
 telephone# char(12));
 
+
 create table supply
 (sup# number(4) primary key,
 pid char(4) references products(pid),
