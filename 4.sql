@@ -20,6 +20,8 @@ create or replace procedure add_products(
 begin
 insert into products(pid, pname, qoh, qoh_threshold, original_price, discnt_rate)
 VALUES (v_pid, v_pname, v_qoh, v_qoh_threshold, v_original_price, v_discnt_rate);
+exception
+when DUP_VAL_ON_INDEX then dbms_output.put_line(sqlcode || '--' || sqlerrm);
 end;
 /
 show errors

@@ -25,5 +25,8 @@ begin
 			dbms_output.put_line(aRow.dollar);
 			dbms_output.put_line(aRow.dollar/aRow.qty);
 		end loop;
+
+exception
+when no_data_found then dbms_output.put_line('No such products informaition found!');
 end;
 /
