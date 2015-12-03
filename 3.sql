@@ -4,7 +4,7 @@ create or replace procedure report_monthly_sale(
 begin
 	for aRow in (select 
 				products.pname, 
-				to_char(purchases.ptime, 'MM') as month,
+				to_char(purchases.ptime, 'Mon') as month,
 				to_char(purchases.ptime, 'YYYY') as year,
 				sum(purchases.qty) as qty,
 				sum(purchases.total_price) as dollar
@@ -12,7 +12,7 @@ begin
 				on purchases.pid = products.pid
 			where prod_id = products.pid
 			group by 
-				to_char(purchases.ptime, 'MM'),
+				to_char(purchases.ptime, 'Mon'),
 				to_char(purchases.ptime, 'YYYY'),
 				products.pname,
 				purchases.qty,
