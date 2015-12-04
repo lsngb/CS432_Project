@@ -8,3 +8,6 @@ drop table logs cascade constraints;
 drop SEQUENCE pur_seq;
 drop SEQUENCE sup_seq;
 drop SEQUENCE log_seq;
+drop trigger trig_sup;
+drop trigger trig_log;
+drop trigger trig_pur;

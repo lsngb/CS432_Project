@@ -20,9 +20,9 @@ discnt_rate number(3,2) check(discnt_rate between 0 and 0.8));
 
 create table purchases
 (pur# number(6) primary key,
-eid char(3),
-pid char(4),
-cid char(4),
+eid char(3) references employees(eid),
+pid char(4) references products(pid),
+cid char(4) references customers(cid),
 qty number(5),
 ptime date,
 total_price number(7,2));
@@ -32,7 +32,6 @@ create table suppliers
 sname varchar2(15) not null unique,
 city varchar2(15),
 telephone# char(12));
-
 
 create table supply
 (sup# number(4) primary key,
