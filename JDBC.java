@@ -12,9 +12,10 @@ public class JDBC {
 		OracleDataSource ds = new oracle.jdbc.pool.OracleDataSource();
         ds.setURL("jdbc:oracle:thin:@castor.cc.binghamton.edu:1521:ACAD111"); 
         Connection conn = ds.getConnection("xxin1", "123456");
+        Scanner in = new Scanner(System.in);
 		while (true){
 			System.out.println("Choose from:\n1. add a purchase; 2. add a product; 3.show tables; other_num. quit ");
-			Scanner in = new Scanner(System.in);
+			in = new Scanner(System.in);
 			int num = in.nextInt();
 			if (num == 1 ) {
 				CallableStatement cs = conn.prepareCall("begin add_purchase(:1,:2,:3,:4); end;");
@@ -31,7 +32,7 @@ public class JDBC {
       			
       			cs.setString(1, eid);
       			cs.setString(2, pid);
-      			cs.setString(3, pid);
+      			cs.setString(3, cid);
       			cs.setInt(4, qty);
 
       			cs.executeQuery();
