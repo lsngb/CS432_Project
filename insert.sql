@@ -45,4 +45,12 @@ insert into suppliers values('s4', 'D', 'Queens', '333-222-5555');
 insert into suppliers values('s5', 'E', 'New York', '777-444-5555');
 insert into suppliers values('s6', 'F', 'Binghamton', '666-777-5555');
 
-insert into supply values (0, 'p001', 's1', to_date('12-AUG-2015 10:34:30', 'DD-MON-YYYY HH24:MI:SS'), 2);
+insert into supply values (0, 'p001', 's1', to_date('12-AUG-2015 10:34:30', 'DD-MON-YYYY HH24:MI:SS'), 20);
+insert into supply values (0, 'p002', 's2', to_date('19-AUG-2015 10:34:30', 'DD-MON-YYYY HH24:MI:SS'), 20);
+insert into supply values (0, 'p003', 's3', to_date('19-AUG-2015 10:34:30', 'DD-MON-YYYY HH24:MI:SS'), 20);
+insert into supply values (0, 'p004', 's4', to_date('19-AUG-2015 10:34:30', 'DD-MON-YYYY HH24:MI:SS'), 20);
+insert into supply values (0, 'p005', 's5', to_date('12-AUG-2015 10:34:30', 'DD-MON-YYYY HH24:MI:SS'), 20);
+insert into supply values (0, 'p006', 's6', to_date('19-AUG-2015 10:34:30', 'DD-MON-YYYY HH24:MI:SS'), 20);
+insert into supply values (0, 'p007', 's1', to_date('19-AUG-2015 10:34:30', 'DD-MON-YYYY HH24:MI:SS'), 20);
+insert into supply values (0, 'p008', 's2', to_date('19-AUG-2015 10:34:30', 'DD-MON-YYYY HH24:MI:SS'), 20);
+insert into supply values (0, 'p009', 's3', to_date('19-AUG-2015 10:34:30', 'DD-MON-YYYY HH24:MI:SS'), 20);

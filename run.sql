@@ -1,0 +1,10 @@
+start tables
+start 1
+start insert
+start 2
+start 3
+start 4
+start 5
+start 6
+start 7
+start JDBC
