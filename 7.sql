@@ -42,12 +42,10 @@ begin
 		dbms_output.put_line('The new qoh is: ' || new_qty);
 	end if;
 	select last_visit_date into v_last_visit from customers where cid = :new.cid;
-	--If purchase made on same date
-	if(trunc(:new.ptime) = trunc(v_last_visit)) then
-		update customers set visits_made = visits_made + 1
-		where cid = :new.cid;
-	--If purchase made on different date 	
-	else
+	update customers set visits_made = visits_made + 1
+	where cid = :new.cid;
+	--If purchase made on different date
+	if(trunc(:new.ptime) != trunc(v_last_visit)) then
 		update customers set last_visit_date = sysdate
 		where cid = :new.cid;
 	end if;
