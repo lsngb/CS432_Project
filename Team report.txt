@@ -1,0 +1,4 @@
+Alex Li
+Xin Xin
+Team Report
+	For this project, Alex was responsible for questions 3, 5, and 7 in the PL/SQL implementation while Xin Xin was responsible for questions 1, 2, 4, and 6.  After completing the PL/SQL part, we worked together on the interface part.  We met once for this project.  Prior to this project, we had some experience in SQL but little to no experience in PL and JDBC.  After completing the project, we learned a lot about PL and JDBC.
